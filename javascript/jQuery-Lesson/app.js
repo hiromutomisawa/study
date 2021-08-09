@@ -1,3 +1,10 @@
+$(function(){
+  $('button').on('click',function(){
+    $('ul').children().css('color','red');
+  });
+});
+// childrenは、HTML要素直下のすべての子要素を取得するときに使う
+
 // $(function(){
 //   $('.bg1').on('click',function(){
 //     $('.bg1').slideUp();
