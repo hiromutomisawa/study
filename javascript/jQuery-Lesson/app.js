@@ -1,3 +1,32 @@
+// $(function(){
+//   $('.bg1').on('click',function(){
+//     $('.bg1').slideUp();
+//   });
+//   $('.bg2').on('click',function(){
+//     $('.bg2').slideUp();
+//   });
+//   $('.bg3').on('click',function(){
+//     $('.bg3').slideUp();
+//   });
+//   $('.bg4').on('click',function(){
+//     $('.bg4').slideUp();
+//   });
+// })
+
+// 解説
+// 上記の書き方ではClass名の異なるイベントを４つも記述しなければならず面倒。
+// thisを利用するとシンプルにまとめることが可能になる。
+// box3クラスがクリックされたときthis(クリックされた要素)のみslideUPさせる。
+// デメリット---コード上からでは何をクリックしたときに動作するか判別しにくい。
+
+$(function(){
+  $('.box3').on('click',function(){
+    $(this).slideUp();
+  });
+});
+
+
+
 $(function(){
   $('.box1').slideDown(1500,function(){
     $('.box1').css({
